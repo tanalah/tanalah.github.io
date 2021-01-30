@@ -1,0 +1,68 @@
+@media only screen and (min-width:0px){
+    .section-content{
+        text-align:center;
+    }
+
+    .section-content>*{
+        text-align:left;
+    }
+    .card{
+        width:100% !important;
+        overflow:hidden; 
+        display:inline-block;
+        margin:5px 0 !important;
+        vertical-align:top;
+        padding:0 !important;
+	    padding-bottom:5px !important;
+        box-shadow: 0 0 5px 1px #CCC !important;
+    }
+    .card-thumbnail{
+        width:100% !important;
+    }
+    .card-info{
+	   padding:5px;
+    }
+    .card-info>.card-header{
+        border-bottom:solid 1px #999;
+    }
+    .card-info>.card-header>h4{
+        font-size:1.2em !important;
+    }
+    .justify, .card-info p{
+        text-align:justify;
+    }
+    .navigation.pagination{
+        text-align: center;
+        margin:10px 0;
+    }
+    .navigation.pagination .page-numbers{
+        display:inline-block;
+        border:solid 1px #DDD;
+        border-radius:5px;
+        padding:5px 10px;
+    }
+
+    .navigation.pagination .page-numbers.current{
+        font-weight: bold;
+    }
+    .navigation.pagination a.page-numbers:hover, .navigation.pagination a.page-numbers:focus{
+        text-decoration:none !important;
+    }
+
+}
+@media only screen and (min-width:650px){
+    .card{
+        margin:5px !important;
+        width:45% !important;
+    }
+}
+@media only screen and (min-width:850px){
+    .card{
+        width:30% !important;
+    }
+}
+@media only screen and (min-width:1024px){
+    .card{
+        width:22% !important;
+    }
+}

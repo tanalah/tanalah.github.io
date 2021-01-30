@@ -1,0 +1,36 @@
+@media only screen{
+    .screen .header, #search-screen{
+        background-color: #FF7900;
+    }
+    .navigation.pagination .page-numbers.current{
+        border-color:#FF6000 !important;
+    }
+    .form .buttons{
+        color:#FFF !important;
+        /*background:#2C71B0;*/
+        background-color:#FF6D00 !important;
+    }
+    #main-screen>.container .sidebar .widget_calendar table>caption{
+        color:#FF6000;
+    }
+    .btn-primary.no-bg:hover, .btn-primary.no-bg:focus, .btn-primary, #main-screen>.container .post_tag>a, #screen-left, #main-screen .rt_comments .comment-form .submit {
+        /*background:#2C71B0;*/
+        background-color:#FF6D00;
+    }
+    .btn-primary:hover, .btn-primary:focus, #main-screen>.container .sidebar h2, #screen-left{
+        background:#FF6000;
+    }
+    .form .buttons:focus, .form .buttons:hover{
+        background:#FF6000 !important;
+    }
+    /**
+     ** Search Screen
+    **/
+    .sidescreen ul.menu>li>a:hover, .sidescreen ul.menu>li>a:focus, .sidescreen ul.menu li.active>a, .sidescreen ul.menu>li>*:hover, .sidescreen ul.menu>li>*:focus, .sidescreen ul.menu .submenu.visible>ul, .navigation.pagination .page-numbers.current{
+        color: #fff !important;
+        background-color:#FF6000;
+    }
+    .sidescreen ul.menu li.active>a{
+        background-color:#FF5400;
+    }
+}

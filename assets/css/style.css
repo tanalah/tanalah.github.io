@@ -1,0 +1,619 @@
+* {
+    font-family: Ubuntu, sans-serif;
+    box-sizing:border-box;
+    user-select: none;
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    scrollbar-width: thin;
+}
+.screen-reader-text{
+    display:none;
+}
+@media only screen and (min-width:0){
+    .header .brand>.brand-title{
+        font-family: Oswald, sans-serif;
+    }
+    h1, h2, h3, h4, h5,h6{
+        /*font-family: Teko, sans-serif;*/
+    }
+    *::-webkit-scrollbar-track,*::-webkit-scrollbar,*::-webkit-scrollbar-thumb{
+        border-radius: 0px;
+    }
+
+    *::-webkit-scrollbar
+    {
+        width: 5px;
+    }
+    p{
+        text-align:justify;
+    }
+    select {
+        border:none;
+        padding:5px;
+    }
+    .no-margin{
+        margin:0;
+    }
+    .mt-10, .my-10{
+        margin-top:10px;
+    }
+    .mb-10, .my-10{
+        margin-bottom:10px;
+    }
+    .ml-10, .mx-10{
+        margin-left:10px;
+    }
+    .mr-10, .mx-10{
+        margin-right:10px;
+    }
+    .p-0, .no-padding{
+        padding:0 !important;
+    }
+    .br-5{
+        border-radius: 5px !important;
+    }
+    .br-10{
+        border-radius: 10px !important;
+    }
+    html,body {
+        margin:0;
+        z-index:1;
+        width:100%;
+        overflow: hidden;
+    }
+    a {
+        text-decoration:none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+
+    .left{
+        float:left;
+    }
+    .right{
+        float:right;
+    }
+
+    input{
+        border:none;
+        padding-top:5px;
+        padding-bottom:5px;
+        font-size:1.1em;
+        height:40px;
+    }
+
+    .form-input-full{
+        width:100% !important;
+    }
+    .btn, .form .buttons,form button{
+        border: none;
+        cursor:pointer;
+        display:inline-block;
+        padding:10px;
+        height:40px !important;
+    }
+    .btn-icon>*{
+        width:100%;
+        height:100%;
+        cursor:pointer;
+    }
+    .btn-icon img{
+        padding:10px;
+        width:100%;
+    }
+    
+    /**
+     * WP-Members
+    **/
+    .form, .form>fieldset>div{
+        margin:10px 0 !important;
+    }
+    .form>fieldset>div{
+        width:100% !important;
+    }
+    .form{
+        display:block;
+    }
+    .form>fieldset{
+        margin:0 !important;
+    }
+    .form legend{
+        display:none;
+    }
+    .form input[type=checkbox]{
+        vertical-align: middle !important;
+        margin:0 !important;
+        height:20px;
+        width:20px;
+    }
+    .form .buttons {
+        border-radius:5px;
+    }
+    /**
+     * wpcp-carousel
+     */
+    .wpcp-carousel-section .wpcp-single-item img {
+        height:auto;
+    }
+    /**
+     * Screen Management
+    **/
+    .screen {
+        top:0;
+        bottom:0;
+        width:100%;
+        height: 100%;
+        position:absolute;
+        overflow: hidden;
+        display:block;
+    }
+    .screen>.container{
+        position:relative;
+        top:0;
+        right:0;
+        left:0;
+        bottom:0;
+        width:100%;
+        height: 100%;
+        padding-top: 60px;
+        overflow: hidden;
+    }
+
+    /**
+     ** The Sidescreens
+    **/
+    .sidescreen {
+        z-index:100;
+        width:0;
+        transition:width 0.1s 0.5s, left 0.5s, right 0.5s;
+    }
+    #screen-left {
+        left:-100%;
+        right:auto;
+    }
+    #screen-right {
+        right:-100%;
+        left:auto;
+    }
+    .sidescreen.visible{
+        transition: width 0.1s, left 0.5s 0.1s, right 0.5s 0.1s;
+        width:100%;
+    }
+    #screen-left.visible {
+        left:0;
+        box-shadow: 1px 0 10px 1px #00000033;
+    }
+    #screen-right.visible {
+        right:0;
+    }
+
+    /**
+     ** the Screen Cache When sidescreen appear
+    **/
+    #screen-cache{
+        display:none;
+    }
+    #screen-cache.visible{
+        display: block;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        width:100%;
+        height:100%;
+        z-index:99;
+    }
+    #screen-cache.visible::after{
+        content:' ';
+    }
+
+    /**
+     ** Screen containing main content
+    **/
+    #main-screen{
+        left: 0;
+        right:0;
+        z-index:98;
+    }
+    /**
+     * Screen Elements
+    **/
+    .screen .header, .screen .footer{
+        left:0;
+        right:0;
+        width:100%;
+        padding: 10px 20px;
+    }
+    /**
+     ** Header Part
+    **/
+    .screen .header{
+        top: 0;
+        height:60px;
+        position:absolute;
+        font-weight:bold;
+        text-align:top;
+        padding:10px;
+    }
+
+    .screen .header>*{
+        display:block;
+        height:40px;
+        padding:10px;
+    }
+
+    .screen .header .btn{
+        height:40px;
+        border: none;
+        cursor:pointer;
+        display:inline-block;
+    }
+    .screen .header .btn-icon{
+        padding:0 !important;
+        width:40px;
+    }
+    /** Scroll **/
+    .screen .scrollable {
+        overflow-y:auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling:touch;
+        height:100%;
+    }
+    .screen .scrollable>.featured-image {
+        box-shadow: 0 1px 5px 1px #00000055;
+        height: 250px;
+        height:calc(100vw / 4.6 - 1px);
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position: center;
+        position:relative;
+        text-align:center;
+    }
+    .screen .main-content>.post-title {
+        text-align:left;
+        z-index:98;
+        vertical-align:middle;
+        padding:10px 10px;
+        margin-bottom: 10px !important;
+    }
+    
+    .screen .main-content>.post-title, #main-screen .main-content, #main-screen>.container .sidebar .widget_calendar table,#main-screen>.container .sidebar .widget_calendar nav>span.wp-calendar-nav-prev, #main-screen>.container .sidebar .widget_calendar nav>span.wp-calendar-nav-next,#main-screen>.container .sidebar .widget_calendar table>caption,#main-screen>.container .post_tag, #main-screen .rt_comments .comment-respond, #main-screen .rt_comments>h2.comments_count{
+        border-bottom:1px solid #DDD;
+    }
+    /**
+     ** Main-Content Part
+    **/
+    
+    .screen .main-content {
+        padding:10px;
+        min-height:96%;
+    }
+    #main-screen>.container .sidebar{
+        vertical-align: top;
+        display:block;
+        margin:10px;
+        padding:10px;
+        box-shadow: 0px 0px 3px #AAA;
+    }
+    #main-screen>.container .sidebar h2{
+        text-align:center;
+        margin:5px 0;
+        padding:5px 0;
+        border-radius: 3px;
+    }
+    #main-screen>.container .sidebar .widget_calendar table{
+        width:100%;
+        text-align:center;
+    }
+    #main-screen>.container .sidebar .widget_calendar nav{
+        padding:5px 0;
+        text-align:center;
+    }
+    #main-screen>.container .sidebar .widget_calendar nav>span.wp-calendar-nav-prev, #main-screen>.container .sidebar .widget_calendar nav>span.wp-calendar-nav-next{
+        display: inline-block;
+        text-align:center;
+        width:45%;
+    }
+    #main-screen>.container .sidebar .widget_calendar nav a{
+        text-decoration:none;
+    }
+    
+    #main-screen>.container .sidebar .widget_calendar table>caption{
+        font-weight:bold;
+        padding:5px;
+    }
+    #main-screen>.container .sidebar form>*{
+        width:100%;
+        margin-bottom: 5px;
+    }
+    #main-screen>.container .sidebar form>input, #main-screen .rt_comments li.comment>.comment-body{
+        border:1px solid #DDD;
+    }
+    /**
+     ** Footer Part
+    **/
+    .screen .footer{
+        position: relative;
+        padding:10px;
+    }
+
+    /**
+     * Menu Elements sidescreen
+    **/
+
+    .sidescreen ul.menu{
+        margin-top:0;
+        padding:0;
+    }
+    .sidescreen ul.menu li{
+        list-style:none;
+        vertical-align: middle;
+        width:100%;
+        padding-left:0;
+    }
+
+    .sidescreen ul.menu *:hover, ul.menu *:focus{
+        text-decoration:none;
+    }
+    .sidescreen ul.menu .submenu{
+        position:relative;
+    }
+    .sidescreen ul.menu .submenu>ul{
+        overflow:hidden;
+        max-height:0;
+        transition:max-height 0.5s;
+    }
+    .sidescreen ul.menu .submenu>ul>li{
+        display:none;
+    }
+    .sidescreen ul.menu .submenu>.menu-toggle{
+        width:38px;
+        text-align:center;
+        padding:10px;
+        text-transform:uppercase;
+        position:absolute;
+        cursor:pointer;
+        top:0;
+        right:0;
+    }
+    .sidescreen ul.menu .submenu>.menu-toggle::after{
+        content:'+';
+    }
+    .sidescreen ul.menu .submenu.visible>.menu-toggle::after{
+        content:'-';
+    }
+    .sidescreen ul.menu .submenu.visible>ul{
+        padding:5px;
+        max-height:1500px;
+        transition:max-height 0.5s;
+    }.sidescreen ul.menu .submenu.visible>ul>li{
+        display:block;
+    }
+    .sidescreen ul.menu li>a {
+        display: block;
+        padding:10px 5px 10px 30px !important; 
+        font-weight:400;
+	font-size:0.9em;
+    }
+    .sidescreen ul.menu li.active>a {
+        font-weight:600;
+    }
+    .sidescreen ul.menu .submenu li:last-child>a {
+        border-bottom:none;
+    }
+    .sidescreen ul.menu li>a:hover, ul.menu li>a:focus{
+        cursor:pointer;
+    }
+    .header .brand{
+        padding:0;
+        overflow: hidden;
+    }
+    .header .brand>.brand-title{
+       display:none;
+    }
+    .header .brand>.brand-img{
+        width:auto; 
+        height:40px;
+        border-radius:15px;
+        padding:5px;
+    }
+    #main-screen>.container .sidebar .widget{
+        vertical-align:top;
+        display:inline-block;
+        width:100%;
+        margin:20px 5px;
+    }
+    #main-screen>.container .main-content img{
+        max-width:100%;
+        height:auto;
+    }
+    #main-screen>.container .alignleft{
+        float:left;
+    }
+    #main-screen>.container .alignright{
+        float:right;
+    }
+    #main-screen>.container .aligncenter{
+        display:block;
+        margin:auto;
+    }
+    #main-screen>.container .alignnone{
+        display:inline;
+    }
+    #main-screen>.container .post_cat>.post-categories{
+        list-style:none;
+        display:inline-block;
+        margin:0;
+        padding:10px 0;
+    }
+    #main-screen>.container .post_cat>.post-categories>li{
+        display:inline;
+    }
+    #main-screen>.container .post_tag{
+        display:block;
+        padding:10px;
+    }
+    #main-screen>.container .post_tag>a{
+        display:inline-block;
+        padding:5px;
+        border-radius:5px;
+        text-decoration: none;
+    }
+    #main-screen .rt_comments {
+        text-align: left;
+        border-top:1px solid #DDD;
+    }
+    #main-screen .rt_comments .comment-form>p>input,#main-screen .comment-form>p>textarea{
+        width:100%;
+        display:block;
+    }
+    #main-screen .rt_comments .comment-form>p>textarea{
+        max-width:100%;
+        min-width:100%;
+        height:100px;
+        min-height: 50px;
+        max-height: 200px;
+    } 
+    #main-screen .rt_comments .comment-respond{
+        padding:0 10px;
+        margin-bottom: 10px;
+    }
+    #main-screen .rt_comments .comment-respond>h3{
+        font-weight:normal;
+        font-size: 1.15em;
+    }
+    #main-screen .rt_comments .comment-respond>h3>a{
+        font-weight:bold;
+        font-style: italic;
+    }
+    #main-screen .rt_comments .comment-respond>h3 small a{
+        font-weight:normal;
+        text-decoration:none !important;
+        padding:5px; 
+        border-radius:2px;
+    }
+    #main-screen .rt_comments .comment-form .logged-in-as {
+        float:right;
+        margin:0;
+    }
+    #main-screen .rt_comments .comment-form .form-submit {
+        text-align: right;
+    }
+    #main-screen .rt_comments .comment-form>.comment-form-cookies-consent>input, #main-screen .rt_comments .comment-form>.form-submit>input.submit {
+        width:auto;
+        display:inline;
+        vertical-align: middle;
+    }
+    #main-screen .rt_comments li.comment{
+        list-style: none;
+        
+        
+    }
+    #main-screen .rt_comments li.comment>.comment-body{
+        padding:10px;
+        border-radius: 3px;
+    }
+    #main-screen .rt_comments li.comment>.comment-body>.comment-author{
+        height:25px;
+        margin-bottom: 4px;
+        
+    }
+    #main-screen .rt_comments li.comment>.comment-body>.comment-author>img{
+        border-radius:50px;
+    }
+    #main-screen .rt_comments li.comment>.comment-body>.comment-meta{
+        text-align:left;
+        font-size: 0.9em;
+        margin:0 0 8px 37px;
+    }
+    #main-screen .rt_comments li.comment>.comment-body>.reply{
+        text-align:right;
+        margin-bottom:10px;
+    }
+    #main-screen .rt_comments li.comment>.comment-body>.reply>a{
+        padding:10px;
+        text-decoration:none;
+        border-radius: 2px;
+    }
+    #main-screen .rt_comments li.comment>.comment-body>.comment-author>*{
+        vertical-align: middle;
+    }
+}
+@media only screen and (min-width:250px){
+    .header .brand>.brand-title{
+        padding:0 5px;
+        margin:5px 0; 
+        display:inline-block;
+        font-size:1.4em;
+        vertical-align:top;
+    }
+}
+@media only screen and (min-width:350px){
+    
+    .sidescreen {
+        width:0;
+    }
+    .sidescreen.visible {
+        width:350px;
+    }
+    #screen-left{
+        left:-350px;
+    }
+    #screen-right{
+        right:-350px;
+    }
+    .header .brand{
+        float:left;
+        padding:0;
+        vertical-align:middle;
+    }
+    .header .brand>.brand-img{
+        float:left;
+    }
+    
+}
+@media only screen and (min-width:550px){
+    
+    #main-screen>.container .sidebar{
+        text-align:justify;
+    }
+    #main-screen>.container .sidebar .widget{
+        width:48%;
+    }
+}
+@media only screen and (min-width:1024px){
+    #main-screen>.container>.scrollable{
+        position: relative;
+    }
+    #main-screen>.container .main-content{
+        width:75% !important;
+	margin: auto;
+    }
+    #main-screen>.container .main-content.w-sidebar{
+        display:inline-block;
+    }
+    #main-screen>.container .sidebar{
+        display:inline-block;
+        width:24%;
+        margin:10px 0;
+    }
+    #main-screen>.container .sidebar .widget{
+        display:block;
+        width:98%;
+    }
+}
+
+@media only screen and (min-width:1600px){
+    #main-screen>.container>.scrollable{
+        margin: auto;
+        text-align:center;
+    }
+    #main-screen>.container .main-content{
+        width:1168.75px !important;
+    }
+    #main-screen>.container .sidebar{
+        width:396.25px;
+    }
+}

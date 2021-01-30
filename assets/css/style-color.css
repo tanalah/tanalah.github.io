@@ -1,0 +1,104 @@
+@media only screen{
+    *::selection{
+        background-color: #000;
+        color:#fff;
+    }
+    *::-webkit-scrollbar-track, *::-webkit-scrollbar {
+        background-color: #eee;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+    }
+    select{
+        background-color:#FFF;
+    }
+    .grey {
+        color:#555;
+    }
+    .black, a.black:focus, a.black:hover, .black a:focus, .black a:hover {
+        color:#000;
+    }
+    a.black, .black a {
+        color:#222;
+    }
+    .no-deco, no-deco:focus, .no-deco:hover, .no-deco a, no-deco a:focus, .no-deco a:hover{
+        text-decoration:none !important;
+    }
+    html,body {
+        background-color:#000;
+    }
+    #main-screen>.container .sidebar{
+        background-color:#FFF;
+    }
+    #main-screen>.container .sidebar h2{
+        color:#FFF;
+    }
+    #main-screen>.container .post_tag>a{
+        color:#FFF;
+    }
+    /**
+     ** Buttons color
+    **/
+    .no-bg{
+        background:none !important;
+    }
+    .bg-white{
+        background-color:#FFF;
+    }
+    .bg-dark, #main-screen .comment-form .submit{
+        background-color:#222;
+        color:#FFF;
+    }
+    .btn-primary{
+        color:#FFF;
+    }
+    
+    .screen .header .brand, .screen .header .brand a{
+        color:#fff !important;
+    }
+    .navigation.pagination a.page-numbers:hover, .navigation.pagination a.page-numbers:focus{
+        background-color: #ddd ;
+        border-color:#ddd ;
+    }
+    .card{
+        background-color:#FFF; 
+    }
+
+    .navigation.pagination .page-numbers{
+        background-color:#FFF ;
+        border-color:#DDD ;
+    }
+
+    #screen-left .menu,#screen-left a{
+        color: #FFF;
+    }
+    /**
+     ** the Screen Cache When sidescreen appear
+    **/
+    #screen-cache.visible{
+        background-color: #0005;
+    }
+
+    /**
+     ** Screen containing main content
+    **/
+    #screen-right {
+        background-color: saddlebrown;
+    }
+    #main-screen{
+        background-color: aliceblue;
+    }
+
+    #main-screen .rt_comments .comment-respond>h3 small a{
+        color:#FFF !important;
+        background:#B44141;
+    }
+    
+    #main-screen .rt_comments li.comment>.comment-body{
+        background: #FFF;
+    }
+    #main-screen .rt_comments li.comment>.comment-body>.reply>a{
+        background: #DDD;
+        color:#000;
+    }
+}

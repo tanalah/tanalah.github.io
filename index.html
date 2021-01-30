@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Page Description">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<title>Tanalah</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
+        <link rel="stylesheet" href="assets/css/style-color.css">
+        <link rel="stylesheet" href="assets/css/green/style-color.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/gallery.css">
+        <link rel="icon" type="image/x-icon" href="assets/img/logo.png"/>
+	</head>
+	<body>
+        <div class="screen sidescreen" id="screen-left">
+            <div class="container">
+                <div class="header">
+                    <button class="btn btn-primary no-bg btn-icon right" id="close-collapse-left"><img src="assets/img/close-light.png" alt="X" title="Close"></button>
+                    <a class="brand" href="/"><img class="brand-img" src="assets/img/logo.png" alt=""><span style="" class="brand-title">Tanalah</span></a>
+                </div>
+                <div class="scrollable main-content p-0">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="screen" id="main-screen">
+            <div class="container">
+                <div class="header">
+                    <button class="btn no-bg btn-icon left" id="collapse-screen-left"><img src="assets/img/menu-light.png" alt="M" title="Menu"></button>
+                    <a class="brand" href="<?= esc_url( home_url( '/' ) ); ?>"><img class="brand-img" src="assets/img/logo.png" alt=""><span class="brand-title">Tanalah</span></a>
+                </div>
+                <div class="scrollable">
+                    <div class="main-content">
+                        <!--h1 class="no-margin post-title" style="font-size:1.7em">TitrePage</h1-->
+                            <div class="section-content">
+                                <div class="card">
+                                    <img src="assets/img/default_image_01.png" class="card-thumbnail">
+                                    <div class="card-info">
+                                        <div class="card-header"><h4 class="no-margin mb-10"><a href="#" class="black no-deco" style="display:inline-block;width:100%;">Titre</a></h4></div>
+                                        <div class="card-details my-10" style="font-size:0.9em">
+                                            <div><a href="#" class="black no-deco">
+                                                <img src="assets/img/Logo_512.png" class="" style="border-radius:50px;height:50px;width:auto;vertical-align:top;float:left; margin-right:5px;">
+                                                Tanalah</a>
+                                                <div class="grey">29-01-2021</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="footer bg-dark" style="text-align:center;">
+                        Contact : +261 33 29 545 51 | +261 34 35 347 27 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="screen" id="screen-cache"></div>
+        <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/app.js"></script>
+<!--script>
+    var vid = document.querySelector('video.wp-video-shortcode');
+    vid.autoplay = true;
+    vid.load();
+</script-->
+	</body>
+</html
